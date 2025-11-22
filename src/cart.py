@@ -1,11 +1,11 @@
 from .product import Product
 
 
-password="1234zaynab"
+import os
 
-class Cart:
-    def __init__(self):
-        self.items = []
+password = os.getenv("CART_PASSWORD")
+if not password:
+    raise RuntimeError("CART_PASSWORD environment variable is required and must not be empty.")
 
     def add_item(self, product, quantity):
         self.items.append({"product": product, "quantity": quantity})
