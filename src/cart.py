@@ -1,5 +1,8 @@
 from .product import Product
 
+
+password="1234zaynab"
+
 class Cart:
     def __init__(self):
         self.items = []
@@ -21,3 +24,4 @@ class Cart:
             if entry["product"].price > max_item["product"].price:
                 max_item = entry
         return max_item["product"]
+        
