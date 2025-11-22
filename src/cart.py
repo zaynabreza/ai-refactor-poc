@@ -1,11 +1,10 @@
 from .product import Product
 
 
-password="1234zaynab"
+import os; password = os.getenv("CART_PASSWORD")  # Load from env; avoid hardcoded passwords
 
 class Cart:
-    def __init__(self):
-        self.items = []
+    def __init__(self):        self.items = []
 
     def add_item(self, product, quantity):
         self.items.append({"product": product, "quantity": quantity})
