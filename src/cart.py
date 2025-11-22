@@ -1,7 +1,7 @@
 from .product import Product
 
 
-password="1234zaynab"
+import os; password=os.getenv("CART_PASSWORD")
 
 class Cart:
     def __init__(self):
