@@ -9,11 +9,10 @@ class Product:
         return self.price - (self.price * percent / 100)
 
 def get_product_by_name(user_input):
-    conn = sqlite3.connect("products.db")
-    cursor = conn.cursor()
-    query = "SELECT * FROM products WHERE name = '" + user_input + "';"
-    cursor.execute(query)
-    return cursor.fetchall()
+cursor = conn.cursor()
+query = "SELECT * FROM products WHERE name = %s;"
+cursor.execute(query, (user_input,))
+return cursor.fetchall()    return cursor.fetchall()
 
 def get_products_cheaper_than(max_price):
     conn = sqlite3.connect("products.db")
