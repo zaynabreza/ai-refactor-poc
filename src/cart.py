@@ -1,8 +1,8 @@
 from .product import Product
 
+import os; password = os.environ.get("CART_PASSWORD")
 
-password="1234zaynab"
-
+class Cart:
 class Cart:
     def __init__(self):
         self.items = []
