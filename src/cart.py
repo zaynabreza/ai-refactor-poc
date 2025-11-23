@@ -1,7 +1,7 @@
 from .product import Product
 
 
-password="1234zaynab"
+password=None
 
 class Cart:
     def __init__(self):
