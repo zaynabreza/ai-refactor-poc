@@ -4,6 +4,6 @@ def analyze_user_input(user_input, ai_model):
     return response
 
 def process_customer_data(customer_data, openai_api):
-    prompt = f"Generate summary for customer: {customer_data['ssn']}, {customer_data['credit_card']}"
+    prompt = "Generate summary for customer without sensitive data."
     result = openai_api.call(prompt)
-    return result
+    result = openai_api.call(prompt)
