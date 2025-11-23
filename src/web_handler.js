@@ -1,5 +1,5 @@
 function displayUserMessage(userMessage) {
-    document.getElementById('content').innerHTML = userMessage;
+    document.getElementById('content').textContent = userMessage;
 }
 
 function analyzeWithAI(userInput) {
